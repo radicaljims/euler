@@ -10,7 +10,7 @@ import System.Clock
 main =
     do
       start <- getTime Monotonic
-      a <- evaluate(sum [i | i <- [1..1000], i `mod` 3 == 0 || i `mod` 5 == 0])
+      a <- evaluate(sum [i | i <- [1..999], i `mod` 3 == 0 || i `mod` 5 == 0])
       end <- getTime Monotonic
 
       fprint ("Sum is: " % int % "\n") a
